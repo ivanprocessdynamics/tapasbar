@@ -8,7 +8,7 @@ import { useScrollAnimate } from "@/hooks/useScrollAnimate";
 
 const menuData = {
   tapas: [
-    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://images.pexels.com/photos/28490819/pexels-photo-28490819.jpeg" },
+    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://images.pexels.com/photos/28490819/pexels-photo-28490819.jpeg?auto=compress&cs=tinysrgb&w=800" },
     { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://upload.wikimedia.org/wikipedia/commons/6/65/Gambas_al_ajillo.jpg" },
     { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tortilla_Española.jpg" },
     { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Croquetas_de_jam%C3%B3n_-lacestabar.jpg" },
@@ -17,23 +17,23 @@ const menuData = {
   ],
   raciones: [
     { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pulpo_a_la_gallega.JPG" },
-    { name: "Jamón Ibérico de Bellota", description: "Cortado a cuchillo, acompañado de picos de pan.", price: "22.00€", image: "https://images.pexels.com/photos/24706530/pexels-photo-24706530.jpeg" },
+    { name: "Jamón Ibérico de Bellota", description: "Cortado a cuchillo, acompañado de picos de pan.", price: "22.00€", image: "https://images.pexels.com/photos/24706530/pexels-photo-24706530.jpeg?auto=compress&cs=tinysrgb&w=800" },
     { name: "Calamares a la Andaluza", description: "Tiernos y crujientes, con un toque de limón.", price: "14.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Calamares_a_la_andaluza_Barcelona_2024.jpg" },
     { name: "Bacalao al Pil Pil", description: "Con su emulsión de aceite y ajo, pura tradición.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bacalao_al_Pil_Pil(Vizcaya).jpg" },
     { name: "Secreto Ibérico", description: "A la plancha con pimientos asados.", price: "19.00€", image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1887&auto=format&fit=crop" },
     { name: "Rabo de Toro", description: "Estofado durante horas hasta su punto perfecto.", price: "17.50€", image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Rabo_de_toro.jpg" },
   ],
   postres: [
-    { name: "Tarta de Santiago", description: "Almendra artesanal con azúcar glas.", price: "5.50€", image: "https://images.pexels.com/photos/34275027/pexels-photo-34275027.jpeg" },
-    { name: "Flan de Huevo Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://images.pexels.com/photos/18089587/pexels-photo-18089587.jpeg" },
+    { name: "Tarta de Santiago", description: "Almendra artesanal con azúcar glas.", price: "5.50€", image: "https://images.pexels.com/photos/34275027/pexels-photo-34275027.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Flan de Huevo Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://images.pexels.com/photos/18089587/pexels-photo-18089587.jpeg?auto=compress&cs=tinysrgb&w=800" },
     { name: "Tarta de Queso", description: "Cremosa, horneada a baja temperatura.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Tarta_de_queso.jpg" },
     { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Crema_catalana.jpg" },
   ],
   vinos: [
     { name: "Ribera del Duero", description: "Tinto crianza, notas de frutas rojas.", price: "4.50€/copa", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1887&auto=format&fit=crop" },
-    { name: "Albariño", description: "Blanco afrutado de las Rías Baixas.", price: "4.00€/copa", image: "https://images.pexels.com/photos/16148500/pexels-photo-16148500.jpeg" },
-    { name: "Cava Brut Nature", description: "Burbujas finas y elegantes.", price: "5.00€/copa", image: "https://images.pexels.com/photos/14287568/pexels-photo-14287568.jpeg" },
-    { name: "Rioja Reserva", description: "Tinto con crianza en barrica de roble.", price: "5.50€/copa", image: "https://images.pexels.com/photos/17820536/pexels-photo-17820536.jpeg" },
+    { name: "Albariño", description: "Blanco afrutado de las Rías Baixas.", price: "4.00€/copa", image: "https://images.pexels.com/photos/16148500/pexels-photo-16148500.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Cava Brut Nature", description: "Burbujas finas y elegantes.", price: "5.00€/copa", image: "https://images.pexels.com/photos/14287568/pexels-photo-14287568.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Rioja Reserva", description: "Tinto con crianza en barrica de roble.", price: "5.50€/copa", image: "https://images.pexels.com/photos/17820536/pexels-photo-17820536.jpeg?auto=compress&cs=tinysrgb&w=800" },
   ],
 };
 
