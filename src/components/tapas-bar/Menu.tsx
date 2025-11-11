@@ -8,32 +8,27 @@ import { useScrollAnimate } from "@/hooks/useScrollAnimate";
 
 const menuData = {
   tapas: [
-    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://images.pexels.com/photos/28490819/pexels-photo-28490819.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://upload.wikimedia.org/wikipedia/commons/6/65/Gambas_al_ajillo.jpg" },
-    { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tortilla_Española.jpg" },
-    { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Croquetas_de_jam%C3%B3n_-lacestabar.jpg" },
-    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Pimientos_de_Padr%C3%B3n(2929150448).jpg" },
-    { name: "Boquerones en Vinagre", description: "Frescos, marinados en vinagre de Jerez.", price: "6.50€", image: "https://upload.wikimedia.org/wikipedia/commons/b/be/Boquerones_en_vinagre._Tapa_t%C3%ADpica_espa%C3%B1ola.Gastronom%C3%ADa_de_Espa%C3%B1a.jpg" },
+    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Patatas_bravas_%2849415380638%29.jpg" },
+    { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gambas_al_ajillo%2C_2024.jpg" },
+    { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Tortilla_espa%C3%B1ola-MMS.JPG" },
+    { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Croquetas-Jam%C3%B3n-Riofr%C3%ADo.jpg" },
+    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Pimientos_de_Padr%C3%B3n_%282929150448%29.jpg" },
+    { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://images.pexels.com/photos/17321002/pexels-photo-17321002.jpeg?auto=compress&cs=tinysrgb&w=800" },
   ],
   raciones: [
-    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pulpo_a_la_gallega.JPG" },
-    { name: "Jamón Ibérico de Bellota", description: "Cortado a cuchillo, acompañado de picos de pan.", price: "22.00€", image: "https://images.pexels.com/photos/24706530/pexels-photo-24706530.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Calamares a la Andaluza", description: "Tiernos y crujientes, con un toque de limón.", price: "14.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Calamares_a_la_andaluza_Barcelona_2024.jpg" },
-    { name: "Bacalao al Pil Pil", description: "Con su emulsión de aceite y ajo, pura tradición.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bacalao_al_Pil_Pil(Vizcaya).jpg" },
-    { name: "Secreto Ibérico", description: "A la plancha con pimientos asados.", price: "19.00€", image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1887&auto=format&fit=crop" },
-    { name: "Rabo de Toro", description: "Estofado durante horas hasta su punto perfecto.", price: "17.50€", image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Rabo_de_toro.jpg" },
+    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/4/40/Pulpo_a_la_gallega_-jlastras.jpg" },
+    { name: "Paella Mixta", description: "Arroz tradicional con marisco y pollo.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Spanish_Paella_%28Unsplash%29.jpg" },
+    { name: "Albóndigas en Salsa", description: "Caseras en salsa de tomate especiada.", price: "12.00€", image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Alb%C3%B3ndigas%28Tapas%29.jpg" },
   ],
   postres: [
-    { name: "Tarta de Santiago", description: "Almendra artesanal con azúcar glas.", price: "5.50€", image: "https://images.pexels.com/photos/34275027/pexels-photo-34275027.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Flan de Huevo Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://images.pexels.com/photos/18089587/pexels-photo-18089587.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Tarta de Queso", description: "Cremosa, horneada a baja temperatura.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Tarta_de_queso.jpg" },
-    { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Crema_catalana.jpg" },
+    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Churros_con_chocolate.jpg" },
+    { name: "Flan Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/FlanCasero.jpg" },
+    { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Crema_catalana.jpg" },
   ],
-  vinos: [
-    { name: "Ribera del Duero", description: "Tinto crianza, notas de frutas rojas.", price: "4.50€/copa", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1887&auto=format&fit=crop" },
-    { name: "Albariño", description: "Blanco afrutado de las Rías Baixas.", price: "4.00€/copa", image: "https://images.pexels.com/photos/16148500/pexels-photo-16148500.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Cava Brut Nature", description: "Burbujas finas y elegantes.", price: "5.00€/copa", image: "https://images.pexels.com/photos/14287568/pexels-photo-14287568.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Rioja Reserva", description: "Tinto con crianza en barrica de roble.", price: "5.50€/copa", image: "https://images.pexels.com/photos/17820536/pexels-photo-17820536.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  bebidas: [
+    { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://images.pexels.com/photos/28525158/pexels-photo-28525158.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Glass_of_red_wine.jpg" },
   ],
 };
 
@@ -93,14 +88,11 @@ export const Menu = () => {
           <p className="text-muted-foreground mt-2 text-lg">Sabores que te transportan al corazón de España.</p>
         </div>
         <Tabs defaultValue="tapas" className="w-full">
-          <TabsList 
-            className={cn("grid w-full grid-cols-2 md:grid-cols-4 mx-auto max-w-3xl opacity-0", isInView && "animate-slide-in-from-bottom")}
-            style={{ animationDelay: '150ms' }}
-          >
+          <TabsList className="grid w-full grid-cols-4 mx-auto max-w-2xl">
             <TabsTrigger value="tapas">Tapas</TabsTrigger>
             <TabsTrigger value="raciones">Raciones</TabsTrigger>
             <TabsTrigger value="postres">Postres</TabsTrigger>
-            <TabsTrigger value="vinos">Vinos</TabsTrigger>
+            <TabsTrigger value="bebidas">Bebidas</TabsTrigger>
           </TabsList>
           <TabsContent value="tapas" className="mt-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -129,12 +121,10 @@ export const Menu = () => {
               ))}
             </div>
           </TabsContent>
-          <TabsContent value="vinos" className="mt-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {menuData.vinos.map((item, index) => (
-                <div key={item.name} className={cn("opacity-0", isInView && animations[index % 3])} style={{ animationDelay: `${300 + index * 150}ms` }}>
-                  <MenuItem {...item} />
-                </div>
+          <TabsContent value="bebidas" className="mt-8">
+            <div className="grid md:grid-cols-3 gap-6">
+              {menuData.bebidas.map((item, index) => (
+                <MenuItem key={item.name} {...item} />
               ))}
             </div>
           </TabsContent>
