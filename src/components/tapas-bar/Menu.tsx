@@ -16,19 +16,19 @@ const menuData = {
     { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://images.pexels.com/photos/17321002/pexels-photo-17321002.jpeg?auto=compress&cs=tinysrgb&w=800" },
   ],
   raciones: [
-    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/4/40/Pulpo_a_la_gallega_-jlastras.jpg" },
+    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pulpo_a_la_gallega.JPG" },
     { name: "Paella Mixta", description: "Arroz tradicional con marisco y pollo.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Spanish_Paella_%28Unsplash%29.jpg" },
-    { name: "Albóndigas en Salsa", description: "Caseras en salsa de tomate especiada.", price: "12.00€", image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Alb%C3%B3ndigas%28Tapas%29.jpg" },
+    { name: "Albóndigas en Salsa", description: "Caseras en salsa de tomate especiada.", price: "12.00€", image: "https://www.lavanguardia.com/files/image_948_465/uploads/2018/07/17/5e997a42b5463.jpeg" },
   ],
   postres: [
-    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Churros_con_chocolate.jpg" },
-    { name: "Flan Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/FlanCasero.jpg" },
-    { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/7/72/Crema_catalana.jpg" },
+    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://assets.unileversolutions.com/recipes-v3/240757-default.jpg?im=AspectCrop=(625,469);Resize=(625,469)" },
+    { name: "Flan Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://imag.bonviveur.com/flan-de-huevo-casero.webp" },
+    { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://www.frutamare.com/wp-content/uploads/2020/03/crema_catalana-1080x675.jpg.webp" },
   ],
   bebidas: [
-    { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://images.pexels.com/photos/28525158/pexels-photo-28525158.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://www.lotesycestasdenavidad.es/blog/wp-content/uploads/2023/08/Diseno-sin-titulo2.png" },
     { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Glass_of_red_wine.jpg" },
+    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://descorcha.com/cdn/shop/articles/1738072462758.jpg?v=1757001400&width=800" },
   ],
 };
 
