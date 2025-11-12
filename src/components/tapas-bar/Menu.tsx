@@ -28,6 +28,8 @@ const optimizeImageSrc = (url: string) => {
       "images.cookforyourlife.org",
       "tropicanabeachclub.es",
       "media.istockphoto.com",
+      "spanishsabores.com",
+      "faustinorivero.com",
     ];
     if (heavyHosts.includes(u.hostname)) {
       const hostPath = `${u.hostname}${u.pathname}${u.search}`;
@@ -47,7 +49,7 @@ const menuData = {
     { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://www.infobae.com/resizer/v2/KH6OR3WLTRAXBFHFCKUFKNI6A4.jpg?auth=ed1a6aef16bca7840125a81cfc4c4fd48166df53ff3da0f5945f6bdd3634aa1c&smart=true&width=577&height=385&quality=85" },
     { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://imagenes.elpais.com/resizer/v2/EE4F4BBKOVCZNN6YUQKD3HMFL4.jpg?auth=1fef256c3d65ceafcdea14287df1aaffd6bf968a237a3685409cd26bd2230911&width=1000" },
     { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://www.slofoodgroup.com/cdn/shop/articles/croquetas-de-jamon-234754.jpg?crop=center&v=1622775032&width=800" },
-    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcWqmidKStza_wEKw-dUxmgZxBSmf1hHmZgA&s" },
+    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://spanishsabores.com/wp-content/uploads/2018/04/Padron-Peppers-0792-Blog.jpg" },
     { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://www.sherry.wine/media/images/vinos_de_jerez_chocos_fritos.width-876.jpg" },
   ],
   raciones: [
@@ -63,7 +65,7 @@ const menuData = {
   bebidas: [
     { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://images.cookforyourlife.org/wp-content/uploads/2018/08/1-1024x683.jpg" },
     { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://tropicanabeachclub.es/wp-content/uploads/2022/05/Jarras-de-cerveza-0-23042932_m-e1653340148345.jpg" },
-    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://media.istockphoto.com/id/615269202/es/foto/verter-vino-en-copa.jpg?b=1&s=612x612&w=0&k=20&c=RnTakwYnFTxnxpZhgCJKxr1sXIvWEzVZJwrZtGZA8P0=" },
+    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://faustinorivero.com/wp-content/uploads/2023/04/tipos-de-vino-tinto.jpg" },
   ],
 };
 
