@@ -71,6 +71,8 @@ export const Gallery = () => {
                         src={image.src} 
                         alt={image.alt} 
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </CardContent>
                   </Card>
