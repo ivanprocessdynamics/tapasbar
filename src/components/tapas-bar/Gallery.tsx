@@ -13,28 +13,20 @@ import { cn } from "@/lib/utils";
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1770&auto=format&fit=crop",
-    alt: "Interior acogedor del bar El Bodegón"
+    src: "https://media.istockphoto.com/id/1428737062/es/foto/mesa-de-madera-vac%C3%ADa-con-luces-bokeh-en-el-fondo-del-restaurante-borroso.jpg?b=1&s=612x612&w=0&k=20&c=C8t7u0gwWNEA8aIJUQp2A22veJ_gdTl0_Fgdf9LlPS0=",
+    alt: "Mesa de madera con luces bokeh en el restaurante"
   },
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1770&auto=format&fit=crop",
-    alt: "Zona de comedor con mesas de madera"
+    src: "https://architetturaxtutti.com/wp-content/uploads/2022/02/restaurant-hospitality-interior-design-spanish-barcelona.jpg",
+    alt: "Interior de restaurante estilo español en Barcelona"
   },
   {
-    src: "https://images.unsplash.com/photo-1631515924082-064d36885238?q=80&w=1760&auto=format&fit=crop",
-    alt: "Barra con productos españoles"
+    src: "https://www.visitfinland.com/dam/jcr:7c2c8221-ace3-4362-a5b0-8073ee6967e9/Savoy-Interior-7.jpeg",
+    alt: "Interior elegante de restaurante Savoy"
   },
   {
-    src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1770&auto=format&fit=crop",
-    alt: "Terraza exterior con ambiente nocturno"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1554306274-421e813ab2c8?q=80&w=1770&auto=format&fit=crop",
-    alt: "Detalles del local con iluminación cálida"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1603303888424-08a3fed370c3?q=80&w=1887&auto=format&fit=crop",
-    alt: "Zona de preparación de tapas"
+    src: "https://www.sierracantabria.com/restauranteelpuntido/wp-content/uploads/2022/03/Restaurantepano-768x338.jpg",
+    alt: "Panorámica del restaurante El Puntido"
   }
 ];
 
@@ -42,7 +34,13 @@ const optimizeImageSrc = (url: string) => {
   try {
     const u = new URL(url);
     const heavyHosts = [
-      "images.pexels.com"
+      "images.pexels.com",
+      "media.istockphoto.com",
+      "architetturaxtutti.com",
+      "www.visitfinland.com",
+      "visitfinland.com",
+      "www.sierracantabria.com",
+      "sierracantabria.com",
     ];
     if (heavyHosts.includes(u.hostname)) {
       const hostPath = `${u.hostname}${u.pathname}${u.search}`;
