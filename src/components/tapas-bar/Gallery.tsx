@@ -43,8 +43,8 @@ const optimizeImageSrc = (url: string) => {
       "sierracantabria.com",
     ];
     if (heavyHosts.includes(u.hostname)) {
-      const hostPath = `${u.hostname}${u.pathname}${u.search}`;
-      return `https://wsrv.nl/?url=${hostPath}&w=800&h=800&fit=cover&output=webp`;
+      const encoded = encodeURIComponent(url);
+      return `https://wsrv.nl/?url=${encoded}&w=800&h=800&fit=cover&output=webp`;
     }
     return url;
   } catch {
