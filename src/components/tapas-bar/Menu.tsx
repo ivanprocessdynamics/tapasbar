@@ -21,14 +21,14 @@ const menuData = {
     { name: "Albóndigas en Salsa", description: "Caseras en salsa de tomate especiada.", price: "12.00€", image: "https://www.lavanguardia.com/files/image_948_465/uploads/2018/07/17/5e997a42b5463.jpeg" },
   ],
   postres: [
-    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://assets.unileversolutions.com/recipes-v3/240757-default.jpg?im=AspectCrop=(625,469);Resize=(625,469)" },
+    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://assets.unileversolutions.com/recipes-v3/240757-default.jpg?im=AspectCrop=(500,375);Resize=(500,375)" },
     { name: "Flan Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://imag.bonviveur.com/flan-de-huevo-casero.webp" },
     { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://www.frutamare.com/wp-content/uploads/2020/03/crema_catalana-1080x675.jpg.webp" },
   ],
   bebidas: [
     { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://www.lotesycestasdenavidad.es/blog/wp-content/uploads/2023/08/Diseno-sin-titulo2.png" },
     { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://descorcha.com/cdn/shop/articles/1738072462758.jpg?v=1757001400&width=800" },
+    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://descorcha.com/cdn/shop/articles/1738072462758.jpg?v=1757001400&width=600" },
   ],
 };
 
@@ -51,7 +51,13 @@ const MenuItem = ({ name, description, price, image }: { name: string, descripti
       >
         {/* Front Side */}
         <div className="absolute w-full h-full [backface-visibility:hidden] rounded-lg overflow-hidden shadow-lg">
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+          <img 
+            src={image} 
+            alt={name} 
+            className="w-full h-full object-cover" 
+            loading="lazy"
+            decoding="async"
+          />
           <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
             <h3 className="text-xl font-bold text-white drop-shadow-md">{name}</h3>
           </div>
