@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useState } from "react";
 import { 
   Carousel, 
   CarouselContent, 
@@ -37,6 +38,48 @@ const galleryImages = [
   }
 ];
 
+const optimizeImageSrc = (url: string) => {
+  try {
+    const u = new URL(url);
+    const heavyHosts = [
+      "images.pexels.com"
+    ];
+    if (heavyHosts.includes(u.hostname)) {
+      const hostPath = `${u.hostname}${u.pathname}${u.search}`;
+      return `https://wsrv.nl/?url=${hostPath}&w=800&h=800&fit=cover&output=webp`;
+    }
+    return url;
+  } catch {
+    return url;
+  }
+};
+
+const FALLBACK_IMG = "https://placehold.co/800x800?text=Imagen";
+
+const GalleryImage = ({ src, alt }: { src: string; alt: string }) => {
+  const [currentSrc, setCurrentSrc] = useState<string>(FALLBACK_IMG);
+  const optimized = optimizeImageSrc(src);
+  useEffect(() => {
+    let cancelled = false;
+    const pre = new Image();
+    pre.referrerPolicy = "no-referrer";
+    pre.onload = () => { if (!cancelled) setCurrentSrc(optimized); };
+    pre.onerror = () => { if (!cancelled) setCurrentSrc(FALLBACK_IMG); };
+    pre.src = optimized;
+    return () => { cancelled = true; };
+  }, [optimized]);
+  return (
+    <img 
+      src={currentSrc} 
+      alt={alt} 
+      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+  );
+};
+
 export const Gallery = () => {
   const { ref, isInView } = useScrollAnimate<HTMLElement>({ triggerOnce: true });
 
@@ -67,13 +110,7 @@ export const Gallery = () => {
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <Card className="overflow-hidden">
                     <CardContent className="p-0 aspect-square">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt} 
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <GalleryImage src={image.src} alt={image.alt} />
                     </CardContent>
                   </Card>
                 </CarouselItem>

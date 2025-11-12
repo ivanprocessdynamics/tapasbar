@@ -1,10 +1,34 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { useScrollAnimate } from "@/hooks/useScrollAnimate";
+
+// Proxy y fallback para hosts lentos/bloqueo de hotlinking
+const optimizeImageSrc = (url: string) => {
+  try {
+    const u = new URL(url);
+    const heavyHosts = [
+      "www.lavanguardia.com",
+      "descorcha.com",
+      "www.lotesycestasdenavidad.es",
+      "assets.unileversolutions.com",
+      "imag.bonviveur.com",
+      "www.frutamare.com",
+    ];
+    if (heavyHosts.includes(u.hostname)) {
+      const hostPath = `${u.hostname}${u.pathname}${u.search}`;
+      return `https://wsrv.nl/?url=${hostPath}&w=700&h=525&fit=cover&output=webp`;
+    }
+    return url;
+  } catch {
+    return url;
+  }
+};
+
+const FALLBACK_IMG = "https://placehold.co/700x525?text=Imagen";
 
 const menuData = {
   tapas: [
@@ -34,6 +58,18 @@ const menuData = {
 
 const MenuItem = ({ name, description, price, image }: { name: string, description: string, price: string, image: string }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState<string>(FALLBACK_IMG);
+  const src = optimizeImageSrc(image);
+
+  useEffect(() => {
+    let cancelled = false;
+    const pre = new Image();
+    pre.referrerPolicy = "no-referrer";
+    pre.onload = () => { if (!cancelled) setCurrentSrc(src); };
+    pre.onerror = () => { if (!cancelled) setCurrentSrc(FALLBACK_IMG); };
+    pre.src = src;
+    return () => { cancelled = true; };
+  }, [src]);
 
   return (
     <div
@@ -52,11 +88,12 @@ const MenuItem = ({ name, description, price, image }: { name: string, descripti
         {/* Front Side */}
         <div className="absolute w-full h-full [backface-visibility:hidden] rounded-lg overflow-hidden shadow-lg">
           <img 
-            src={image} 
+            src={currentSrc} 
             alt={name} 
             className="w-full h-full object-cover" 
             loading="lazy"
             decoding="async"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
             <h3 className="text-xl font-bold text-white drop-shadow-md">{name}</h3>
