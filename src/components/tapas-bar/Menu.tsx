@@ -17,6 +17,17 @@ const optimizeImageSrc = (url: string) => {
       "assets.unileversolutions.com",
       "imag.bonviveur.com",
       "www.frutamare.com",
+      "cdn-ilddihb.nitrocdn.com",
+      "www.infobae.com",
+      "imagenes.elpais.com",
+      "www.slofoodgroup.com",
+      "encrypted-tbn0.gstatic.com",
+      "www.sherry.wine",
+      "www.alberguesdelcamino.com",
+      "cookingtheglobe.com",
+      "images.cookforyourlife.org",
+      "tropicanabeachclub.es",
+      "media.istockphoto.com",
     ];
     if (heavyHosts.includes(u.hostname)) {
       const hostPath = `${u.hostname}${u.pathname}${u.search}`;
@@ -32,27 +43,27 @@ const FALLBACK_IMG = "https://placehold.co/700x525?text=Imagen";
 
 const menuData = {
   tapas: [
-    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Patatas_bravas_%2849415380638%29.jpg/400px-Patatas_bravas_%2849415380638%29.jpg" },
-    { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gambas_al_ajillo%2C_2024.jpg/400px-Gambas_al_ajillo%2C_2024.jpg" },
-    { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tortilla_espa%C3%B1ola-MMS.JPG/400px-Tortilla_espa%C3%B1ola-MMS.JPG" },
-    { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Croquetas-Jam%C3%B3n-Riofr%C3%ADo.jpg/400px-Croquetas-Jam%C3%B3n-Riofr%C3%ADo.jpg" },
-    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pimientos_de_Padr%C3%B3n_%282929150448%29.jpg/400px-Pimientos_de_Padr%C3%B3n_%282929150448%29.jpg" },
-    { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://images.pexels.com/photos/17321002/pexels-photo-17321002.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://cdn-ilddihb.nitrocdn.com/MgqZCGPEMHvMRLsisMUCAIMWvgGMxqaj/assets/images/optimized/rev-9baa5ce/www.goya.com/wp-content/uploads/2023/10/spicy-potatoes.jpg" },
+    { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://www.infobae.com/resizer/v2/KH6OR3WLTRAXBFHFCKUFKNI6A4.jpg?auth=ed1a6aef16bca7840125a81cfc4c4fd48166df53ff3da0f5945f6bdd3634aa1c&smart=true&width=577&height=385&quality=85" },
+    { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://imagenes.elpais.com/resizer/v2/EE4F4BBKOVCZNN6YUQKD3HMFL4.jpg?auth=1fef256c3d65ceafcdea14287df1aaffd6bf968a237a3685409cd26bd2230911&width=1000" },
+    { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://www.slofoodgroup.com/cdn/shop/articles/croquetas-de-jamon-234754.jpg?crop=center&v=1622775032&width=800" },
+    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcWqmidKStza_wEKw-dUxmgZxBSmf1hHmZgA&s" },
+    { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://www.sherry.wine/media/images/vinos_de_jerez_chocos_fritos.width-876.jpg" },
   ],
   raciones: [
-    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pulpo_a_la_gallega.JPG/400px-Pulpo_a_la_gallega.JPG" },
+    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://www.alberguesdelcamino.com/wp-content/uploads/2024/07/camino.jpg" },
     { name: "Paella Mixta", description: "Arroz tradicional con marisco y pollo.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Spanish_Paella_%28Unsplash%29.jpg/400px-Spanish_Paella_%28Unsplash%29.jpg" },
     { name: "Albóndigas en Salsa", description: "Caseras en salsa de tomate especiada.", price: "12.00€", image: "https://www.lavanguardia.com/files/image_948_465/uploads/2018/07/17/5e997a42b5463.jpeg" },
   ],
   postres: [
-    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://assets.unileversolutions.com/recipes-v3/240757-default.jpg?im=AspectCrop=(400,300);Resize=(400,300)" },
+    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://cookingtheglobe.com/wp-content/uploads/2016/06/churros-con-chocolate-2.jpg" },
     { name: "Flan Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://imag.bonviveur.com/flan-de-huevo-casero.webp" },
     { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://www.frutamare.com/wp-content/uploads/2020/03/crema_catalana-1080x675.jpg.webp" },
   ],
   bebidas: [
-    { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://www.lotesycestasdenavidad.es/blog/wp-content/uploads/2023/08/Diseno-sin-titulo2.png" },
-    { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=400" },
-    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://descorcha.com/cdn/shop/articles/1738072462758.jpg?v=1757001400&width=400" },
+    { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://images.cookforyourlife.org/wp-content/uploads/2018/08/1-1024x683.jpg" },
+    { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://tropicanabeachclub.es/wp-content/uploads/2022/05/Jarras-de-cerveza-0-23042932_m-e1653340148345.jpg" },
+    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://media.istockphoto.com/id/615269202/es/foto/verter-vino-en-copa.jpg?b=1&s=612x612&w=0&k=20&c=RnTakwYnFTxnxpZhgCJKxr1sXIvWEzVZJwrZtGZA8P0=" },
   ],
 };
 
