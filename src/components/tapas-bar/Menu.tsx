@@ -8,27 +8,27 @@ import { useScrollAnimate } from "@/hooks/useScrollAnimate";
 
 const menuData = {
   tapas: [
-    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Patatas_bravas_%2849415380638%29.jpg" },
-    { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gambas_al_ajillo%2C_2024.jpg" },
-    { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Tortilla_espa%C3%B1ola-MMS.JPG" },
-    { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Croquetas-Jam%C3%B3n-Riofr%C3%ADo.jpg" },
-    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Pimientos_de_Padr%C3%B3n_%282929150448%29.jpg" },
-    { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://images.pexels.com/photos/17321002/pexels-photo-17321002.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Patatas Bravas", description: "Nuestra salsa brava secreta con un toque de alioli.", price: "6.50€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Patatas_bravas_%2849415380638%29.jpg/400px-Patatas_bravas_%2849415380638%29.jpg" },
+    { name: "Gambas al Ajillo", description: "Salteadas en aceite de oliva, ajo y guindilla.", price: "9.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gambas_al_ajillo%2C_2024.jpg/400px-Gambas_al_ajillo%2C_2024.jpg" },
+    { name: "Tortilla Española", description: "Jugosa y hecha al momento, como la de la abuela.", price: "5.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tortilla_espa%C3%B1ola-MMS.JPG/400px-Tortilla_espa%C3%B1ola-MMS.JPG" },
+    { name: "Croquetas de Jamón", description: "Caseras y cremosas, con jamón ibérico.", price: "7.50€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Croquetas-Jam%C3%B3n-Riofr%C3%ADo.jpg/400px-Croquetas-Jam%C3%B3n-Riofr%C3%ADo.jpg" },
+    { name: "Pimientos de Padrón", description: "Fritos con aceite de oliva y sal gorda.", price: "6.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pimientos_de_Padr%C3%B3n_%282929150448%29.jpg/400px-Pimientos_de_Padr%C3%B3n_%282929150448%29.jpg" },
+    { name: "Calamares Fritos", description: "Tiernos y crujientes, con un toque de limón.", price: "8.50€", image: "https://images.pexels.com/photos/17321002/pexels-photo-17321002.jpeg?auto=compress&cs=tinysrgb&w=400" },
   ],
   raciones: [
-    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pulpo_a_la_gallega.JPG" },
-    { name: "Paella Mixta", description: "Arroz tradicional con marisco y pollo.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Spanish_Paella_%28Unsplash%29.jpg" },
+    { name: "Pulpo a la Gallega", description: "Cocido a la perfección con pimentón de la Vera.", price: "18.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pulpo_a_la_gallega.JPG/400px-Pulpo_a_la_gallega.JPG" },
+    { name: "Paella Mixta", description: "Arroz tradicional con marisco y pollo.", price: "16.00€", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Spanish_Paella_%28Unsplash%29.jpg/400px-Spanish_Paella_%28Unsplash%29.jpg" },
     { name: "Albóndigas en Salsa", description: "Caseras en salsa de tomate especiada.", price: "12.00€", image: "https://www.lavanguardia.com/files/image_948_465/uploads/2018/07/17/5e997a42b5463.jpeg" },
   ],
   postres: [
-    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://assets.unileversolutions.com/recipes-v3/240757-default.jpg?im=AspectCrop=(500,375);Resize=(500,375)" },
+    { name: "Churros con Chocolate", description: "Recén hechos con chocolate espeso.", price: "5.50€", image: "https://assets.unileversolutions.com/recipes-v3/240757-default.jpg?im=AspectCrop=(400,300);Resize=(400,300)" },
     { name: "Flan Casero", description: "Con caramelo líquido, receta de la abuela.", price: "4.50€", image: "https://imag.bonviveur.com/flan-de-huevo-casero.webp" },
     { name: "Crema Catalana", description: "Con azúcar caramelizada crujiente.", price: "5.00€", image: "https://www.frutamare.com/wp-content/uploads/2020/03/crema_catalana-1080x675.jpg.webp" },
   ],
   bebidas: [
     { name: "Sangría", description: "Refrescante y afrutada, la bebida del verano.", price: "4.00€/copa", image: "https://www.lotesycestasdenavidad.es/blog/wp-content/uploads/2023/08/Diseno-sin-titulo2.png" },
-    { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://descorcha.com/cdn/shop/articles/1738072462758.jpg?v=1757001400&width=600" },
+    { name: "Cerveza", description: "Bien fría, variedad de marcas nacionales.", price: "3.00€", image: "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    { name: "Vino Tinto", description: "Selección de vinos españoles.", price: "4.50€/copa", image: "https://descorcha.com/cdn/shop/articles/1738072462758.jpg?v=1757001400&width=400" },
   ],
 };
 
